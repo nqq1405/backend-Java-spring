@@ -1,17 +1,22 @@
-package Test_springMVC_20_15_2020.springboot_test2.Model;
+package Test_springMVC_20_15_2020.springboot_test2.Entity;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
+@Getter
+@Setter
+@ToString
 public class User {
     private String name;
     private String email;
 
     public User() {
-        List<User> a = new ArrayList<>();
-        for (int i=0; i<10; i++){
-            a.add(new User("Nguyen van a " + i, "nguyenvan"+i + "@gmail.com"));
-        }
     }
 
     public User(String name, String email) {
